@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>哈-登录</title>
+    <link rel="stylesheet" href="./static/css/style.css">
+    <style>
+        li {
+            width: 500px;
+            list-style: none;
+            margin-top: 15px;            
+        }
+        li>span {
+            width: 70px;
+            display: inline-block;
+            cursor: pointer;
+        }
+        li:nth-child(3) a:hover{
+            color: green;
+        }
+        ul{
+            width: 500px;
+            height: 500px;
+            overflow: hidden;                        
+            text-align: center;
+        }
+        li>p {
+            display: inline;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;            
+        }
+        .hovers:hover{
+            background: aliceblue; 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container ">
+        <ul>
+            <li>static</li>
+            <li>
+                <span>name:</span>
+                <input type="text">
+            </li>
+            <li>
+                <span>pass:</span>
+                <input type="password">
+            </li>
+            <li>
+                <span class="hovers"><a href="http://localhost:8888/register">go</a></span>&nbsp;
+                <span><a href="./register.html">register</a></span>
+            </li>
+        </ul>
+    </div>
+
+    <script src="./static/js/jquery.min.js"></script>
+    <script>
+        $.ajax({
+            url: '/users',
+            data: "abc=3",
+            type: "post",
+            success: function (data) {
+                console.log(data, "123");
+            },
+            dataType: 'json'
+        });
+        // document.querySelector(".hover").onmouseover  = function(){
+        //   alert(123);  
+        // };
+    </script>
+</body>
+
+</html>

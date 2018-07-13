@@ -1,0 +1,29 @@
+body {  
+}
+
+a {  
+  color: green;
+}
+a:hover{
+  color: aquamarine;
+}
+*{
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  box-sizing: border-box;
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+
+.abDivCenter{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
